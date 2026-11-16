@@ -1,0 +1,666 @@
+
+/* ==========================================
+   NEXORA
+   Responsive SaaS Pricing Website
+========================================== */
+
+
+/* 1. GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #F4F2EC;
+    --surface: #FFFFFF;
+    --navy: #17243B;
+    --muted: #737B89;
+    --blue: #5375C5;
+    --lime: #D5F278;
+    --border: #E4E2DA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--navy);
+    line-height: 1.6;
+}
+
+
+/* 2. MAIN CONTAINER */
+
+.pricing-section {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 35px 45px;
+}
+
+
+/* 3. NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.navbar p {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+
+/* 4. HERO SECTION */
+
+.hero-content {
+    max-width: 650px;
+    padding: 65px 0 35px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    font-weight: 800;
+    margin-top: 17px;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 420px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+
+/* 5. BILLING TOGGLE */
+
+.billing-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 35px;
+}
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    background: #E8E6DF;
+    padding: 5px;
+    border-radius: 50px;
+    gap: 4px;
+}
+
+.billing-btn {
+    border: none;
+    background: transparent;
+    padding: 11px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.billing-btn.active {
+    background: var(--navy);
+    color: white;
+}
+
+.save-label {
+    font-size: 9px;
+    margin-left: 5px;
+    color: #78912C;
+    font-weight: 800;
+}
+
+
+/* 6. PRICING GRID */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+/* 7. PRICING CARDS */
+
+.pricing-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 32px 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(23, 36, 59, 0.10);
+    border-color: var(--blue);
+}
+
+
+/* 8. PLAN INFORMATION */
+
+.plan-number {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--blue);
+}
+
+.pricing-card h2 {
+    font-size: 25px;
+    letter-spacing: -1px;
+    margin-top: 22px;
+}
+
+.plan-description {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 42px;
+}
+
+
+/* 9. PRICE */
+
+.price-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 22px;
+}
+
+.currency {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 8px 3px 0 0;
+}
+
+.price {
+    font-size: clamp(34px, 4vw, 43px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+}
+
+.unit {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+
+/* 10. DIVIDER */
+
+.card-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 25px 0;
+}
+
+
+/* 11. FEATURES */
+
+.features {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+.features li {
+    font-size: 12px;
+    color: #4E5969;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features li::before {
+    content: "✓";
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+
+/* 12. PLAN BUTTONS */
+
+.plan-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: auto;
+    padding: 13px 16px;
+
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.starter-button {
+    background: #EDEFF3;
+    color: var(--navy);
+}
+
+.starter-button:hover {
+    background: var(--navy);
+    color: white;
+}
+
+.team-button {
+    background: var(--lime);
+    color: var(--navy);
+}
+
+.team-button:hover {
+    background: #BEE45A;
+}
+
+
+/* 13. POPULAR CARD */
+
+.popular-card {
+    background: var(--navy);
+    color: white;
+
+    border: 1px solid var(--navy);
+
+    transform: translateY(-8px);
+
+    overflow: hidden;
+}
+
+.popular-card:hover {
+    transform: translateY(-14px);
+    border-color: var(--lime);
+}
+
+.popular-card .plan-number {
+    color: var(--lime);
+}
+
+.popular-card .plan-description,
+.popular-card .unit {
+    color: #B8C2D1;
+}
+
+.popular-card .features li {
+    color: #E4E9F1;
+}
+
+.popular-card .features li::before {
+    color: var(--lime);
+}
+
+.popular-card .card-divider {
+    background: #39465B;
+}
+
+.popular-button {
+    background: var(--lime);
+    color: var(--navy);
+}
+
+.popular-button:hover {
+    background: white;
+}
+
+
+/* 14. POPULAR RIBBON */
+
+.popular-ribbon {
+    position: absolute;
+
+    top: 18px;
+    right: -32px;
+
+    background: var(--lime);
+    color: var(--navy);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    padding: 6px 35px;
+
+    transform: rotate(35deg);
+}
+
+
+/* 15. TEAM BADGE */
+
+.value-label {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    background: #EEF5D9;
+    color: #536B1E;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+
+    padding: 5px 9px;
+    border-radius: 4px;
+}
+
+
+/* 16. FOOTER */
+
+.pricing-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 35px 0 10px;
+    margin-top: 35px;
+
+    border-top: 1px solid var(--border);
+}
+
+.pricing-footer p {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* 17. MODAL BACKGROUND */
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    background: rgba(15, 25, 42, 0.65);
+
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+}
+
+
+/* 18. MODAL CONTENT */
+
+.modal-content {
+    position: relative;
+
+    background: var(--background);
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 40px;
+
+    border-radius: 14px;
+
+    animation: modalAppear 0.25s ease;
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 19. MODAL CLOSE BUTTON */
+
+.close-modal {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    color: var(--navy);
+}
+
+
+/* 20. MODAL TEXT */
+
+.modal-content h2 {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.modal-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.modal-price {
+    font-size: 42px;
+    font-weight: 800;
+    margin-top: 25px;
+}
+
+.demo-note {
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+/* 21. MODAL CONFIRM BUTTON */
+
+.modal-confirm {
+    width: 100%;
+
+    background: var(--navy);
+    color: white;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    margin-top: 25px;
+
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+
+    transition: background 0.25s ease;
+}
+
+.modal-confirm:hover {
+    background: var(--blue);
+}
+
+
+/* 22. TABLET RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .pricing-section {
+        padding: 25px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .popular-card {
+        order: -1;
+        transform: none;
+    }
+
+    .popular-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .pricing-card {
+        padding: 30px;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+    }
+}
+
+
+/* 23. MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .pricing-section {
+        padding: 20px 16px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar p {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero-content {
+        padding: 45px 0 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .billing-btn {
+        padding: 10px 13px;
+        font-size: 11px;
+    }
+
+    .pricing-card {
+        padding: 27px 22px;
+    }
+
+    .pricing-footer {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        padding: 32px 25px;
+    }
+}
+
+
+/* 24. KEYBOARD ACCESSIBILITY */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+
+/* 25. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .pricing-card:hover,
+    .popular-card:hover {
+        transform: none;
+    }
+}

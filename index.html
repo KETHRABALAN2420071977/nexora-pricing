@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore NEXORA pricing plans. Choose the right plan for your next big idea.">
+
+    <title>NEXORA | Choose Your Plan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pricing-section">
+
+        <!-- NAVIGATION -->
+        <header class="pricing-header">
+
+            <nav class="navbar">
+                <a href="#" class="logo">NEXORA<span>.</span></a>
+
+                <p>PRICING / 2026</p>
+            </nav>
+
+            <!-- HERO -->
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    SIMPLE PLANS. BIG POSSIBILITIES.
+                </span>
+
+                <h1>
+                    Choose your<br>
+                    next level.
+                </h1>
+
+                <p class="hero-description">
+                    Everything you need to turn ideas into progress.
+                    Find the plan that fits your ambition.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- BILLING TOGGLE -->
+        <div class="billing-section">
+
+            <div class="billing-toggle">
+
+                <button
+                    id="monthly"
+                    class="billing-btn active"
+                    aria-pressed="true">
+
+                    Monthly
+
+                </button>
+
+                <button
+                    id="yearly"
+                    class="billing-btn"
+                    aria-pressed="false">
+
+                    Yearly
+                    <span class="save-label">SAVE 20%</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRICING CARDS -->
+        <section class="pricing-grid" aria-label="Pricing plans">
+
+
+            <!-- STARTER PLAN -->
+            <article class="pricing-card starter-card">
+
+                <span class="plan-number">
+                    01 / STARTER
+                </span>
+
+                <h2>Start small.</h2>
+
+                <p class="plan-description">
+                    Everything you need to get started.
+                </p>
+
+                <div class="price-container">
+
+                    <span class="currency">₹</span>
+
+                    <span
+                        class="price"
+                        data-monthly="299"
+                        data-yearly="2870">
+
+                        299
+
+                    </span>
+
+                </div>
+
+                <p class="unit">per month</p>
+
+                <div class="card-divider"></div>
+
+                <ul class="features">
+
+                    <li>3 Active Projects</li>
+                    <li>2 GB Cloud Storage</li>
+                    <li>Basic Analytics</li>
+                    <li>Email Support</li>
+                    <li>1 Team Member</li>
+
+                </ul>
+
+                <button
+                    class="plan-button starter-button"
+                    data-plan="Starter">
+
+                    Get Started
+                    <span>↗</span>
+
+                </button>
+
+            </article>
+
+
+            <!-- PRO PLAN -->
+            <article class="pricing-card popular-card">
+
+                <div class="popular-ribbon">
+                    MOST POPULAR
+                </div>
+
+                <span class="plan-number">
+                    02 / PROFESSIONAL
+                </span>
+
+                <h2>Go further.</h2>
+
+                <p class="plan-description">
+                    More power for bigger ambitions.
+                </p>
+
+                <div class="price-container">
+
+                    <span class="currency">₹</span>
+
+                    <span
+                        class="price"
+                        data-monthly="699"
+                        data-yearly="6710">
+
+                        699
+
+                    </span>
+
+                </div>
+
+                <p class="unit">per month</p>
+
+                <div class="card-divider"></div>
+
+                <ul class="features">
+
+                    <li>Unlimited Projects</li>
+                    <li>20 GB Cloud Storage</li>
+                    <li>Advanced Analytics</li>
+                    <li>Priority Support</li>
+                    <li>1 Team Member</li>
+
+                </ul>
+
+                <button
+                    class="plan-button popular-button"
+                    data-plan="Pro">
+
+                    Choose Pro
+                    <span>↗</span>
+
+                </button>
+
+            </article>
+
+
+            <!-- TEAM PLAN -->
+            <article class="pricing-card team-card">
+
+                <div class="value-label">
+                    BEST VALUE
+                </div>
+
+                <span class="plan-number">
+                    03 / TEAM
+                </span>
+
+                <h2>Build together.</h2>
+
+                <p class="plan-description">
+                    Designed for teams that think bigger.
+                </p>
+
+                <div class="price-container">
+
+                    <span class="currency">₹</span>
+
+                    <span
+                        class="price"
+                        data-monthly="1499"
+                        data-yearly="14390">
+
+                        1,499
+
+                    </span>
+
+                </div>
+
+                <p class="unit">per month</p>
+
+                <div class="card-divider"></div>
+
+                <ul class="features">
+
+                    <li>Unlimited Projects</li>
+                    <li>100 GB Cloud Storage</li>
+                    <li>Advanced Analytics</li>
+                    <li>24/7 Dedicated Support</li>
+                    <li>10 Team Members</li>
+
+                </ul>
+
+                <button
+                    class="plan-button team-button"
+                    data-plan="Team">
+
+                    Choose Team
+                    <span>↗</span>
+
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="pricing-footer">
+
+            <p>BUILT FOR YOUR NEXT BIG THING.</p>
+
+            <p>© 2026 NEXORA STUDIO</p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- PLAN CONFIRMATION MODAL -->
+    <div
+        class="modal"
+        id="planModal"
+        hidden
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="selectedPlan">
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+                aria-label="Close popup">
+
+                &times;
+
+            </button>
+
+            <span class="eyebrow">
+                NEXORA / YOUR SELECTION
+            </span>
+
+            <h2 id="selectedPlan">
+                Pro Plan
+            </h2>
+
+            <p class="modal-description">
+                You've selected your next level.
+            </p>
+
+            <div class="modal-price">
+
+                ₹<span id="selectedPrice">699</span>
+
+            </div>
+
+            <p class="unit" id="selectedUnit">
+                per month
+            </p>
+
+            <button
+                class="modal-confirm"
+                id="confirmPlan">
+
+                Confirm Selection
+
+            </button>
+
+            <p class="demo-note">
+                Demo only — no payment will be processed.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
